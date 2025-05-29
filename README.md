@@ -1,39 +1,43 @@
-# 2025_f1_predictions
+# F1 Race Time Prediction
 
-# 🏎️ F1 Predictions 2025 - Machine Learning Model
+![F1](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Formula_1_logo.svg/1200px-Formula_1_logo.svg.png)
 
-## 🚧 Project Status: Under Development
-**This project is a work in progress and is primarily intended as a learning exercise in machine learning and data science.**
+## Project Overview
 
-- The first prediction programs are not expected to be highly accurate.
-- The model is being built and improved incrementally, with new features and enhancements added after each race.
-- As the project evolves, prediction accuracy will improve as more data and advanced techniques are incorporated.
-- This is a learn-by-doing project, so experimentation and ongoing changes are expected.
+This project is a **Formula 1 race lap time and race result prediction model** built using machine learning techniques. It leverages the [FastF1](https://theoehrly.github.io/Fast-F1/) Python library to extract live and historical F1 telemetry data, combined with weather information and driver/team performance metrics.
 
-## 🚀 Project Overview
-This repository contains machine learning models predicting Formula 1 race outcomes using:
-- Historical race data from FastF1 API
-- Gradient Boosting algorithms
-- Weather data integration
-- Team/driver performance metrics
+The goal is to analyze various race and qualifying parameters, then predict race lap times and ultimately forecast race outcomes such as the winner and podium finishes.
 
-## 📂 Repository Structure
-- For every race the end of the file will be numbered in correlation to the race on the calendar, ex. prediction1 - Australia, prediction2 - China, etc.
+---
 
-## 🔧 Usage
-Run the prediction script:
-```bash
-python3 prediction1.py
-```
-Expected output:
-```
-🏁 Predicted 2025 Australian GP Winner 🏁
-Driver: Charles Leclerc, Predicted Race Time: 82.67s
-...
-🔍 Model Error (MAE): 3.22 seconds
-```
+## Features
 
-## 📈 Model Performance
-The Mean Absolute Error (MAE) is used to evaluate how well the model predicts race times. Lower MAE values indicate more accurate predictions.
+- Loads and processes telemetry data from FastF1 for specific F1 race sessions.
+- Integrates qualifying times, sector times, and race pace data.
+- Uses live weather data from OpenWeatherMap API to factor in weather conditions.
+- Incorporates team performance and historical driver position changes.
+- Trains a Gradient Boosting Regressor ML model to predict lap times.
+- Visualizes feature importances and relationships between variables.
+- Outputs predicted race winner and top 3 podium finishers.
 
-🏎️ **Start predicting F1 races like a data scientist!** 🚀
+---
+
+## Development Status
+🚧 **Under Development** 🚧
+
+This project is built for learning machine learning and F1 data analytics out of pure passion. As the F1 season progresses, I will add prediction files for upcoming races, refine the model, and enhance features for better accuracy.
+
+---
+
+## Installation
+
+1. Clone the repo:
+
+   ```bash
+   git clone https://github.com/yourusername/f1-race-time-prediction.git
+   cd f1-race-time-prediction
+2. Install dependencies (preferably in a virtual environment):
+
+   ```bash
+   pip install fastf1 pandas numpy scikit-learn matplotlib requests
+3. Get an API key from OpenWeatherMap and add it to the code.
